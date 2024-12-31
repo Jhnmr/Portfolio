@@ -495,7 +495,7 @@ section:not(:first-of-type) {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
@@ -557,17 +557,6 @@ section:not(:first-of-type) {
 .project-details.active {
     display: block;
     animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Habilidades */
