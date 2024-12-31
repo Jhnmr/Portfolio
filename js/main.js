@@ -128,12 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Efectos 3D para tarjetas
-    document.querySelectorAll('.project-card, .contact-card').forEach(card => {
-        card.addEventListener('mousemove', handleHover3D);
-        card.addEventListener('mouseleave', resetHover3D);
-    });
-
     // Manejo del navbar en scroll
     let lastScroll = 0;
     const navbar = document.querySelector('.navbar');
@@ -232,16 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Prevenir clic derecho
-    document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-    // Prevenir atajos de teclado comunes para copiar
-    document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U')) {
-            e.preventDefault();
-        }
-    });
-
     // Funcionalidad Ver más
     document.querySelectorAll('.btn-expand').forEach(button => {
         button.addEventListener('click', () => {
@@ -252,26 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// Funciones auxiliares
-function handleHover3D(e) {
-    const card = this;
-    const cardRect = card.getBoundingClientRect();
-    const x = e.clientX - cardRect.left;
-    const y = e.clientY - cardRect.top;
-    
-    const centerX = cardRect.width / 2;
-    const centerY = cardRect.height / 2;
-    
-    const rotateX = (y - centerY) / 10;
-    const rotateY = -(x - centerX) / 10;
-    
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-}
-
-function resetHover3D() {
-    this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-}
 
 function changeLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
