@@ -3,7 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Daniel Argüello Martínez | Full Stack Developer & IT Support Specialist</title>
+    <meta name="description" content="Desarrollador de software full stack con experiencia en Java, JavaScript, Python, C# y PHP. Especializado en soluciones web prácticas y seguras. Disponible para proyectos innovadores.">
+    <meta name="keywords" content="desarrollador full stack, software developer, programador, Java, JavaScript, Python, PHP, Costa Rica, desarrollo web, IT support">
+    <meta name="author" content="Daniel Argüello Martínez">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jhnmr.github.io/Portfolio/">
+    <meta property="og:title" content="Daniel Argüello Martínez | Full Stack Developer">
+    <meta property="og:description" content="Desarrollador de software con pasión por crear soluciones digitales innovadoras y eficientes.">
+    <meta property="og:image" content="https://jhnmr.github.io/Portfolio/img/Daniel.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jhnmr.github.io/Portfolio/">
+    <meta property="twitter:title" content="Daniel Argüello Martínez | Full Stack Developer">
+    <meta property="twitter:description" content="Desarrollador de software con pasión por crear soluciones digitales innovadoras y eficientes.">
+    <meta property="twitter:image" content="https://jhnmr.github.io/Portfolio/img/Daniel.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <!-- Font Awesome para iconos -->
@@ -53,14 +77,20 @@
             <div class="hero-content">
                 <h1 data-translate="nombreCompleto">Daniel Argüello Martínez</h1>
                 <p class="typing-text" data-translate="titulo">Desarrollador de Software y Técnico en Soporte</p>
+                <p class="hero-tagline" data-translate="eslogan">Creando soluciones digitales prácticas y seguras con pasión por la innovación</p>
                 <div class="hero-buttons">
                     <a href="Daniel_CV.pdf" class="btn btn-primary" download>
                         <i class="fas fa-download"></i> <span data-translate="descargaCV">Descargar mi CV</span>
                     </a>
+                    <a href="#contacto" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="contactame">Contáctame</span>
+                    </a>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:jhonmararguellomartinez@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Jhnmr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:jhonmararguellomartinez@gmail.com?subject=Contacto%20desde%20tu%20portafolio%20web" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/50670469306?text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -68,15 +98,32 @@
 
     <!-- Sobre Mí Section -->
     <section id="sobre-mi" class="section">
-        <h2 class="section-title">Sobre Mí</h2>
+        <h2 class="section-title" data-translate="sobreMiTitulo">Sobre Mí</h2>
         <div class="about-content">
             <div class="about-img">
-                <img src="img/Daniel.png" alt="Daniel Argüello">
+                <img src="img/Daniel.png" alt="Daniel Argüello - Desarrollador Full Stack">
             </div>
             <div class="about-text">
-                <h3>¡Hola! Soy <span class="highlight">Jhonmar Daniel Argüello Martínez</span></h3>
-                <p>Desarrollador de software y técnico en soporte, con experiencia en resolución de problemas técnicos, y desarrollo de aplicaciones. Apasionado por convertir ideas en soluciones digitales y por brindar un excelente servicio al cliente. Actualmente, estudio Ingeniería en Computación en la Universidad Estatal a Distancia (UNED) y busco oportunidades para contribuir al crecimiento de proyectos tecnológicos innovadores.</p>
-                
+                <h3 data-translate="saludoInicial">¡Hola! Soy <span class="highlight">Daniel Argüello Martínez</span></h3>
+                <p data-translate="descripcionPersonal">Desarrollador de software full stack y técnico en soporte con experiencia práctica en resolución de problemas técnicos y desarrollo de aplicaciones robustas. Me especializo en crear soluciones digitales eficientes y seguras que transforman ideas en realidad.</p>
+                <p data-translate="descripcionAcademica">Actualmente curso Ingeniería en Computación en la Universidad Estatal a Distancia (UNED), complementando mi formación técnica con conocimientos sólidos en programación, arquitectura de software y metodologías ágiles.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-code"></i>
+                        <h4 data-translate="estatProyectos">5+</h4>
+                        <p data-translate="estatProyectosDesc">Proyectos Completados</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4 data-translate="estatLenguajes">6+</h4>
+                        <p data-translate="estatLenguajesDesc">Lenguajes de Programación</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <h4 data-translate="estatIdiomas">4</h4>
+                        <p data-translate="estatIdiomasDesc">Idiomas</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -504,39 +551,47 @@
 
     <!-- Contacto Section -->
     <section id="contacto" class="section">
-        <h2 class="section-title">Contáctame</h2>
+        <h2 class="section-title" data-translate="contactoTitulo">Contáctame</h2>
         <div class="contact-container">
+            <div class="contact-intro">
+                <p data-translate="contactoIntro">¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría escucharte! Contáctame a través de cualquiera de estos medios:</p>
+            </div>
             <div class="contact-grid">
-                <div class="contact-card">
+                <a href="mailto:jhonmararguellomartinez@gmail.com?subject=Contacto%20desde%20tu%20portafolio%20web&body=Hola%20Daniel,%0D%0A%0D%0AMe%20gustaría%20ponerme%20en%20contacto%20contigo%20para..." class="contact-card clickable" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
+                    <h3 data-translate="email">Email</h3>
                     <p>jhonmararguellomartinez@gmail.com</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Teléfono</h3>
+                    <span class="card-action">Enviar correo</span>
+                </a>
+                <a href="https://wa.me/50670469306?text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." class="contact-card clickable" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
                     <p>+506 7046 9306</p>
-                </div>
+                    <span class="card-action">Abrir chat</span>
+                </a>
                 <div class="contact-card">
                     <i class="fas fa-map-marker-alt"></i>
-                    <h3>Ubicación</h3>
+                    <h3 data-translate="ubicacion">Ubicación</h3>
                     <p>Cartago, Costa Rica</p>
                 </div>
-                <div class="contact-card">
+                <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" class="contact-card clickable" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
                     <p>Daniel Argüello M</p>
-                </div>
-                <div class="contact-card">
+                    <span class="card-action">Ver perfil</span>
+                </a>
+                <a href="https://github.com/Jhnmr" class="contact-card clickable" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
                     <p>Jhnmr</p>
-                </div>
-                <div class="contact-card">
+                    <span class="card-action">Ver repositorios</span>
+                </a>
+                <a href="https://t.me/+50670469306" class="contact-card clickable" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-telegram"></i>
                     <h3>Telegram</h3>
                     <p>+506 7046 9306</p>
-                </div>
+                    <span class="card-action">Enviar mensaje</span>
+                </a>
             </div>
         </div>
     </section>
@@ -546,8 +601,26 @@
         <div class="footer-content">
             <div class="footer-main">
                 <div class="footer-info">
-                    <h3>Daniel Argüello</h3>
-                    <p data-translate="footer-description">Desarrollador de Software</p>
+                    <h3>Daniel Argüello Martínez</h3>
+                    <p data-translate="footer-description">Desarrollador de Software Full Stack</p>
+                    <p class="footer-tagline" data-translate="footer-tagline">Transformando ideas en soluciones digitales</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-footer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Jhnmr" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-footer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:jhonmararguellomartinez@gmail.com?subject=Contacto%20desde%20tu%20portafolio%20web" aria-label="Email" class="social-icon-footer">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/50670469306?text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon-footer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/+50670469306" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="social-icon-footer">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-section">
@@ -556,28 +629,28 @@
                             <li><a href="#inicio" data-translate="nav-home">Inicio</a></li>
                             <li><a href="#sobre-mi" data-translate="nav-about">Sobre Mí</a></li>
                             <li><a href="#proyectos" data-translate="nav-projects">Proyectos</a></li>
+                            <li><a href="#habilidades" data-translate="nav-skills">Habilidades</a></li>
                             <li><a href="#experiencia" data-translate="nav-experience">Experiencia</a></li>
+                            <li><a href="#contacto" data-translate="nav-contact">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4 data-translate="footer-contact">Contacto</h4>
+                        <h4 data-translate="footer-contact">Contacto Directo</h4>
                         <ul>
-                            <li><a href="mailto:jhonmararguellomartinez@gmail.com">Email</a></li>
-                            <li><a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:jhonmararguellomartinez@gmail.com?subject=Contacto%20desde%20tu%20portafolio%20web">jhonmararguellomartinez@gmail.com</a></li>
+                            <li><a href="https://wa.me/50670469306?text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer">+506 7046 9306</a></li>
+                            <li>Cartago, Costa Rica</li>
                         </ul>
                     </div>
                 </div>
-
-
-                
             </div>
             <div class="footer-bottom">
                 <div class="language-switch">
-                    <button class="lang-btn" data-lang="es">ESP</button>
+                    <button class="lang-btn active" data-lang="es">ESP</button>
                     <span>/</span>
                     <button class="lang-btn" data-lang="en">ENG</button>
                 </div>
-                <p class="copyright" data-translate="footer-copyright">2024/12/26. Todos los derechos reservados.</p>
+                <p class="copyright" data-translate="footer-copyright">&copy; 2025 Daniel Argüello Martínez. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
