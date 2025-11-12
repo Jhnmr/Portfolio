@@ -1,102 +1,95 @@
-/* Modo Oscuro Variables */
+/* ========================================
+   DARK MODE STYLES
+   ======================================== */
+
 [data-theme="dark"] {
-    /* Tema oscuro - Verdes */
-    --primary-color: #10b981;    /* Verde esmeralda */
-    --secondary-color: #059669;  /* Verde oscuro */
-    --accent-color: #34d399;     /* Verde claro */
-    --gradient-primary: linear-gradient(135deg, #10b981, #34d399);
-    
-    /* Colores base modo oscuro */
-    --white: #1a1a1a;            /* Gris muy oscuro */
-    --light-gray: #242424;       /* Gris oscuro */
-    --medium-gray: #333333;      /* Gris medio */
-    --dark-gray: #e5e5e5;        /* Gris claro */
-    --black: #ffffff;            /* Texto claro */
+    /* Paleta de colores para modo oscuro - Gradientes violeta/morado */
+    --primary-color: #a78bfa;        /* Violeta claro */
+    --secondary-color: #8b5cf6;      /* Violeta */
+    --accent-color: #c4b5fd;         /* Violeta más claro */
+    --success-color: #34d399;        /* Verde esmeralda */
+    --warning-color: #fbbf24;        /* Amarillo */
+    --error-color: #f87171;          /* Rojo suave */
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    --gradient-secondary: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    --gradient-blue: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
+
+    /* Colores neutrales invertidos */
+    --white: #0f172a;               /* Fondo oscuro principal */
+    --light-gray: #1e293b;          /* Fondo de tarjetas */
+    --medium-gray: #334155;         /* Bordes */
+    --dark-gray: #cbd5e1;           /* Texto principal */
+    --darker-gray: #f1f5f9;         /* Títulos */
+    --black: #ffffff;               /* Texto más claro */
+
+    /* Transparencias */
+    --primary-transparent: rgba(167, 139, 250, 0.15);
+    --accent-transparent: rgba(196, 181, 253, 0.15);
 
     /* Sombras para modo oscuro */
-    --shadow-sm: 0 2px 4px rgba(16, 185, 129, 0.2);
-    --shadow-md: 0 4px 6px rgba(16, 185, 129, 0.2);
-    --shadow-lg: 0 10px 15px rgba(16, 185, 129, 0.2);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    --shadow-glow: 0 0 20px rgba(167, 139, 250, 0.4);
 }
 
-/* Hero section en modo oscuro */
-[data-theme="dark"] .hero {
-    background-color: var(--white);
-}
-
-[data-theme="dark"] .hero-content {
-    color: var(--black);
-}
-
-[data-theme="dark"] .social-links a {
-    color: var(--black);
-}
-
-[data-theme="dark"] .social-links a:hover {
-    color: var(--accent-color);
-}
-
-/* Asegurarse de que todos los textos sean legibles */
+/* Aplicar color-scheme */
 [data-theme="dark"] {
     color-scheme: dark;
 }
 
+/* Body y fondos generales */
 [data-theme="dark"] body {
     background-color: var(--white);
-    color: var(--black);
+    color: var(--dark-gray);
 }
 
+/* Navbar */
 [data-theme="dark"] .navbar {
-    background-color: var(--light-gray);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
 }
 
-[data-theme="dark"] .project-card {
+[data-theme="dark"] .nav-links {
+    background: rgba(15, 23, 42, 0.95);
+}
+
+[data-theme="dark"] .lang-toggle,
+[data-theme="dark"] .theme-toggle-btn {
+    background: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+[data-theme="dark"] .lang-toggle:hover,
+[data-theme="dark"] .theme-toggle-btn:hover {
+    background: var(--primary-transparent);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .lang-dropdown {
     background: var(--light-gray);
 }
 
-[data-theme="dark"] .skill {
-    background-color: var(--light-gray);
-}
-
-[data-theme="dark"] .timeline-content,
-[data-theme="dark"] .contact-card,
-[data-theme="dark"] .contact-form,
-[data-theme="dark"] .social-contact {
+[data-theme="dark"] .lang-option {
     background: var(--light-gray);
+    color: var(--dark-gray);
 }
 
-[data-theme="dark"] .form-group input,
-[data-theme="dark"] .form-group textarea {
-    color: var(--black);
-    border-color: var(--medium-gray);
+[data-theme="dark"] .lang-option:hover {
+    background: var(--medium-gray);
+    color: var(--primary-color);
 }
 
-[data-theme="dark"] .form-group label {
-    background-color: var(--light-gray);
+/* Hero Section */
+[data-theme="dark"] .hero {
+    background: var(--white);
 }
 
-[data-theme="dark"] .form-group input:focus ~ label,
-[data-theme="dark"] .form-group textarea:focus ~ label,
-[data-theme="dark"] .form-group input:valid ~ label,
-[data-theme="dark"] .form-group textarea:valid ~ label {
-    background: var(--light-gray);
-}
-
-/* Ajustes de sombras para modo oscuro */
-[data-theme="dark"] .shadow-sm {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-[data-theme="dark"] .shadow-md {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-[data-theme="dark"] .shadow-lg {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-}
-
-/* Ajustes específicos para modo oscuro */
 [data-theme="dark"] .hero-content h1 {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -104,45 +97,283 @@
     -webkit-text-fill-color: transparent;
 }
 
+[data-theme="dark"] .typing-text,
+[data-theme="dark"] .hero-tagline {
+    color: var(--dark-gray);
+}
+
+/* Botones */
+[data-theme="dark"] .btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Social Links */
+[data-theme="dark"] .social-links a {
+    background: var(--primary-transparent);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .social-links a:hover {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+/* Tarjetas y contenedores */
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .skill,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .education-card,
+[data-theme="dark"] .stat-item {
+    background: var(--light-gray);
+    border-color: var(--medium-gray);
+}
+
+[data-theme="dark"] .project-card:hover,
+[data-theme="dark"] .skill:hover,
+[data-theme="dark"] .timeline-content:hover,
+[data-theme="dark"] .contact-card:hover,
+[data-theme="dark"] .education-card:hover,
+[data-theme="dark"] .stat-item:hover {
+    border-color: var(--primary-color);
+}
+
+/* Project Image */
+[data-theme="dark"] .project-image {
+    background: var(--medium-gray);
+}
+
+[data-theme="dark"] .image-loader {
+    background: var(--medium-gray);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .image-fallback {
+    background: var(--medium-gray);
+    color: var(--dark-gray);
+}
+
+[data-theme="dark"] .project-overlay {
+    background: rgba(139, 92, 246, 0.95);
+}
+
+/* Carrusel */
+[data-theme="dark"] .carousel-button {
+    background: var(--light-gray);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .carousel-button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .carousel-dot {
+    background: var(--medium-gray);
+}
+
+[data-theme="dark"] .carousel-dot.active,
+[data-theme="dark"] .carousel-dot:hover {
+    background: var(--primary-color);
+}
+
+/* Progress bars */
+[data-theme="dark"] .progress-bar {
+    background: var(--medium-gray);
+}
+
 [data-theme="dark"] .progress {
     background: var(--gradient-primary);
 }
 
-[data-theme="dark"] .timeline-date {
+/* Timeline */
+[data-theme="dark"] .timeline-container::before {
     background: var(--gradient-primary);
 }
 
-[data-theme="dark"] .btn-primary {
-    background: var(--gradient-primary);
-}
-
-[data-theme="dark"] .project-card:hover {
-    border-color: var(--accent-color);
-}
-
-[data-theme="dark"] .nav-links li a:hover::after {
-    background: var(--accent-color);
-}
-
-[data-theme="dark"] ::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-}
-
-[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+[data-theme="dark"] .timeline-dot {
     background: var(--primary-color);
 }
 
-/* Ajustes de contraste para mejor legibilidad */
-[data-theme="dark"] .contact-card,
-[data-theme="dark"] .timeline-content,
-[data-theme="dark"] .project-card,
-[data-theme="dark"] .skill {
-    background: var(--light-gray);
-    border: 1px solid var(--medium-gray);
+[data-theme="dark"] .timeline-date {
+    background: var(--gradient-primary);
+    color: white;
 }
 
-[data-theme="dark"] .form-group input:focus,
-[data-theme="dark"] .form-group textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
-} 
+[data-theme="dark"] .tech-stack span,
+[data-theme="dark"] .project-tech span {
+    background: var(--primary-transparent);
+    color: var(--primary-color);
+}
+
+/* Footer */
+[data-theme="dark"] .footer {
+    background: var(--white);
+    border-top-color: var(--medium-gray);
+}
+
+[data-theme="dark"] .footer-info h3 {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .footer-info p,
+[data-theme="dark"] .footer-section a,
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .made-with {
+    color: var(--dark-gray);
+}
+
+[data-theme="dark"] .footer-section a:hover {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .footer-section h4 {
+    color: var(--darker-gray);
+}
+
+[data-theme="dark"] .social-icon-footer {
+    background: var(--primary-transparent);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .social-icon-footer:hover {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-top-color: var(--medium-gray);
+}
+
+/* Scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Títulos y textos */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--darker-gray);
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--darker-gray);
+}
+
+[data-theme="dark"] .section-subtitle {
+    color: var(--dark-gray);
+}
+
+/* About section */
+[data-theme="dark"] .about-img img {
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .highlight {
+    color: var(--primary-color);
+}
+
+/* Contact cards */
+[data-theme="dark"] .contact-card i,
+[data-theme="dark"] .stat-item i,
+[data-theme="dark"] .skill i,
+[data-theme="dark"] .image-fallback i {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .card-action {
+    color: var(--primary-color);
+}
+
+/* Menu button */
+[data-theme="dark"] .menu-btn span {
+    background: var(--dark-gray);
+}
+
+/* Education */
+[data-theme="dark"] .education-period {
+    color: var(--primary-color);
+}
+
+/* Links generales */
+[data-theme="dark"] a {
+    color: inherit;
+}
+
+/* Timeline header */
+[data-theme="dark"] .timeline-header h3 {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-expand {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-expand:hover {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .job-title {
+    color: var(--dark-gray);
+}
+
+/* Bordes de sección */
+[data-theme="dark"] .about-stats {
+    border-top-color: var(--medium-gray);
+}
+
+[data-theme="dark"] .timeline-details {
+    border-top-color: var(--medium-gray);
+}
+
+/* Íconos del navbar */
+[data-theme="dark"] .nav-links a {
+    color: var(--dark-gray);
+}
+
+[data-theme="dark"] .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Logo */
+[data-theme="dark"] .logo {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .logo-text {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+/* Made with heart */
+[data-theme="dark"] .made-with i {
+    color: var(--error-color);
+}
+
+/* Suavizar transición entre temas */
+[data-theme="dark"] * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

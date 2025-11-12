@@ -38,19 +38,12 @@
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <!-- Grupo de logo y tema -->
-               
-                <div class="logo">Portfolio</div>
-                <div class="logo-theme-group">
-                    <div class="theme-switch">
-                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </div>
-                   
+                <!-- Logo -->
+                <div class="logo">
+                    <span class="logo-text">DA</span>
+                    <span class="logo-full">Portfolio</span>
                 </div>
- 
+
                 <!-- Menú hamburguesa para móvil -->
                 <div class="menu-btn">
                     <span></span>
@@ -60,13 +53,40 @@
 
                 <!-- Enlaces de navegación -->
                 <ul class="nav-links">
-                    <li><a href="#inicio" data-translate="nav-home"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li><a href="#sobre-mi" data-translate="nav-about"><i class="fas fa-user"></i> Sobre Mí</a></li>
-                    <li><a href="#proyectos" data-translate="nav-projects"><i class="fas fa-code"></i> Proyectos</a></li>
-                    <li><a href="#habilidades" data-translate="nav-skills"><i class="fas fa-tools"></i> Habilidades</a></li>
-                    <li><a href="#experiencia" data-translate="nav-experience"><i class="fas fa-briefcase"></i> Experiencia</a></li>
-                    <li><a href="#contacto" data-translate="nav-contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    <li><a href="#inicio" data-translate="nav-home"><i class="fas fa-home"></i> <span>Inicio</span></a></li>
+                    <li><a href="#sobre-mi" data-translate="nav-about"><i class="fas fa-user"></i> <span>Sobre Mí</span></a></li>
+                    <li><a href="#proyectos" data-translate="nav-projects"><i class="fas fa-code"></i> <span>Proyectos</span></a></li>
+                    <li><a href="#habilidades" data-translate="nav-skills"><i class="fas fa-tools"></i> <span>Habilidades</span></a></li>
+                    <li><a href="#experiencia" data-translate="nav-experience"><i class="fas fa-briefcase"></i> <span>Experiencia</span></a></li>
+                    <li><a href="#contacto" data-translate="nav-contact"><i class="fas fa-envelope"></i> <span>Contacto</span></a></li>
                 </ul>
+
+                <!-- Grupo de controles (idioma y tema) -->
+                <div class="navbar-controls">
+                    <!-- Selector de idioma -->
+                    <div class="language-selector">
+                        <button class="lang-toggle" aria-label="Change language">
+                            <i class="fas fa-globe"></i>
+                            <span class="current-lang">ES</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span> Español
+                            </button>
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span> English
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Switch de tema -->
+                    <div class="theme-switch">
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -87,7 +107,7 @@
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/daniel-argüello-6b0139235/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Jhnmr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="mailto:jhonmararguellomartinez@gmail.com?subject=Contacto%20desde%20tu%20portafolio%20web" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     <a href="https://wa.me/50670469306?text=Hola%20Daniel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -136,27 +156,35 @@
 
     <!-- Proyectos Section -->
     <section id="proyectos" class="section">
-        <h2 class="section-title">Proyectos</h2>
+        <h2 class="section-title" data-translate="proyectosTitulo">Proyectos</h2>
+        <p class="section-subtitle" data-translate="proyectosSubtitulo">Explora algunos de mis trabajos más destacados</p>
         <div class="projects-carousel">
             <!-- Proyecto 1: Tienda Virtual -->
             <div class="project-slide">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="img/imagen1.png" alt="Tienda Virtual">
+                        <div class="image-loader">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <img src="img/imagen1.png" alt="Tienda Virtual" loading="lazy" onerror="this.parentElement.classList.add('image-error')">
+                        <div class="image-fallback">
+                            <i class="fas fa-tools"></i>
+                            <p data-translate="trabajandoEn">Trabajando en este proyecto...</p>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://jhnmr.github.io/Store/" target="_blank" class="btn-project">
+                                <a href="https://jhnmr.github.io/Store/" target="_blank" class="btn-project" aria-label="Ver demo">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/Jhnmr/Store" target="_blank" class="btn-project">
+                                <a href="https://github.com/Jhnmr/Store" target="_blank" class="btn-project" aria-label="Ver código">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Tienda Virtual</h3>
-                        <p>E-commerce con catálogo de productos y carrito de compras</p>
+                        <h3 data-translate="proyecto1Titulo">Tienda Virtual</h3>
+                        <p data-translate="proyecto1Desc">E-commerce con catálogo de productos y carrito de compras</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -170,18 +198,25 @@
             <div class="project-slide">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="img/imagen2.png" alt="Aplicación de Notas">
+                        <div class="image-loader">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <img src="img/imagen2.png" alt="Aplicación de Notas" loading="lazy" onerror="this.parentElement.classList.add('image-error')">
+                        <div class="image-fallback">
+                            <i class="fas fa-tools"></i>
+                            <p data-translate="trabajandoEn">Trabajando en este proyecto...</p>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/Jhnmr/NotasApp" target="_blank" class="btn-project">
+                                <a href="https://github.com/Jhnmr/NotasApp" target="_blank" class="btn-project" aria-label="Ver código">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Gestor de Notas</h3>
-                        <p>Aplicación de escritorio para gestión de notas personales</p>
+                        <h3 data-translate="proyecto2Titulo">Gestor de Notas</h3>
+                        <p data-translate="proyecto2Desc">Aplicación de escritorio para gestión de notas personales</p>
                         <div class="project-tech">
                             <span>Java</span>
                             <span>Swing</span>
@@ -195,18 +230,25 @@
             <div class="project-slide">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="img/imagen3.png" alt="Conversor de Divisas">
+                        <div class="image-loader">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <img src="img/imagen3.png" alt="Conversor de Divisas" loading="lazy" onerror="this.parentElement.classList.add('image-error')">
+                        <div class="image-fallback">
+                            <i class="fas fa-tools"></i>
+                            <p data-translate="trabajandoEn">Trabajando en este proyecto...</p>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/Jhnmr/ConversorApp" target="_blank" class="btn-project">
+                                <a href="https://github.com/Jhnmr/ConversorApp" target="_blank" class="btn-project" aria-label="Ver código">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Conversor de Divisas</h3>
-                        <p>App móvil para conversión de monedas en tiempo real</p>
+                        <h3 data-translate="proyecto3Titulo">Conversor de Divisas</h3>
+                        <p data-translate="proyecto3Desc">App móvil para conversión de monedas en tiempo real</p>
                         <div class="project-tech">
                             <span>Android Studio</span>
                             <span>Java</span>
@@ -220,21 +262,28 @@
             <div class="project-slide">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="img/imagen4.png" alt="Sitio Barbería">
+                        <div class="image-loader">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <img src="img/imagen4.png" alt="Sitio Barbería" loading="lazy" onerror="this.parentElement.classList.add('image-error')">
+                        <div class="image-fallback">
+                            <i class="fas fa-tools"></i>
+                            <p data-translate="trabajandoEn">Trabajando en este proyecto...</p>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://jhnmr.github.io/Barberia/" target="_blank" class="btn-project">
+                                <a href="https://jhnmr.github.io/Barberia/" target="_blank" class="btn-project" aria-label="Ver demo">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/Jhnmr/Barberia" target="_blank" class="btn-project">
+                                <a href="https://github.com/Jhnmr/Barberia" target="_blank" class="btn-project" aria-label="Ver código">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Barbería Web</h3>
-                        <p>Sitio web con integración de WhatsApp para citas</p>
+                        <h3 data-translate="proyecto4Titulo">Barbería Web</h3>
+                        <p data-translate="proyecto4Desc">Sitio web con integración de WhatsApp para citas</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -249,18 +298,25 @@
             <div class="project-slide">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="img/imagen5.png" alt="Administrador de Tiempos">
+                        <div class="image-loader">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <img src="img/imagen5.png" alt="Administrador de Tiempos" loading="lazy" onerror="this.parentElement.classList.add('image-error')">
+                        <div class="image-fallback">
+                            <i class="fas fa-tools"></i>
+                            <p data-translate="trabajandoEn">Trabajando en este proyecto...</p>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/Jhnmr/TimeManager" target="_blank" class="btn-project">
+                                <a href="https://github.com/Jhnmr/TimeManager" target="_blank" class="btn-project" aria-label="Ver código">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Gestor de Tiempos</h3>
-                        <p>Sistema de gestión de tiempos libres con macros</p>
+                        <h3 data-translate="proyecto5Titulo">Gestor de Tiempos</h3>
+                        <p data-translate="proyecto5Desc">Sistema de gestión de tiempos libres con macros</p>
                         <div class="project-tech">
                             <span>Excel</span>
                             <span>VBA</span>
@@ -272,12 +328,21 @@
         </div>
 
         <!-- Botones de navegación del carrusel -->
-        <button class="carousel-button prev">
+        <button class="carousel-button prev" aria-label="Proyecto anterior">
             <i class="fas fa-chevron-left"></i>
         </button>
-        <button class="carousel-button next">
+        <button class="carousel-button next" aria-label="Proyecto siguiente">
             <i class="fas fa-chevron-right"></i>
         </button>
+
+        <!-- Indicadores del carrusel -->
+        <div class="carousel-indicators">
+            <button class="carousel-dot active" data-slide="0" aria-label="Ir a proyecto 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Ir a proyecto 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Ir a proyecto 3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="Ir a proyecto 4"></button>
+            <button class="carousel-dot" data-slide="4" aria-label="Ir a proyecto 5"></button>
+        </div>
     </section>
 
       <!-- Fin Proyectos Seccion -->
@@ -605,7 +670,7 @@
                     <h3 data-translate="ubicacion">Ubicación</h3>
                     <p>Cartago, Costa Rica</p>
                 </div>
-                <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" class="contact-card clickable" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/daniel-argüello-6b0139235/" class="contact-card clickable" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
                     <p>Daniel Argüello M</p>
@@ -636,7 +701,7 @@
                     <p data-translate="footer-description">Desarrollador de Software Full Stack</p>
                     <p class="footer-tagline" data-translate="footer-tagline">Transformando ideas en soluciones digitales</p>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/jhonmar-argüello-martínez-6b0139235/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-footer">
+                        <a href="https://www.linkedin.com/in/daniel-argüello-6b0139235/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-footer">
                             <i class="fab fa-linkedin"></i>
                         </a>
                         <a href="https://github.com/Jhnmr" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-footer">
@@ -676,12 +741,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="language-switch">
-                    <button class="lang-btn active" data-lang="es">ESP</button>
-                    <span>/</span>
-                    <button class="lang-btn" data-lang="en">ENG</button>
-                </div>
                 <p class="copyright" data-translate="footer-copyright">&copy; 2025 Daniel Argüello Martínez. Todos los derechos reservados.</p>
+                <p class="made-with">Made with <i class="fas fa-heart"></i> in Costa Rica</p>
             </div>
         </div>
     </footer>
